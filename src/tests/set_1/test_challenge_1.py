@@ -11,4 +11,7 @@ BASE64_STRING = b'SSdtIGtpbGxpbmcgeW91c' \
 
 
 def test_convert_hex_to_base64():
-    assert convert_hex_to_base64(HEX_STRING) == BASE64_STRING
+    result = convert_hex_to_base64(HEX_STRING)
+
+    assert result == BASE64_STRING
+    assert isinstance(result, bytes)
